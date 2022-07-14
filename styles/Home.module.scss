@@ -1,0 +1,201 @@
+.container {
+  padding: 30px;
+}
+.hero {
+  height: 100vh;
+  max-width: 100vw;
+  position: relative;
+}
+.heroImageContainer {
+  background-image: url("./../public/hero.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media screen and (max-width: 576px) {
+    background-image: url("./../public/mobile_hero.jpg");
+  }
+}
+.about {
+  margin-top: 30px;
+}
+.about h1 {
+  text-align: center;
+  font-size: 34px;
+}
+.about p {
+  text-align: center;
+  font-size: 18px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (max-width: 576px) {
+    width: 90%;
+    font-size: 16px;
+  }
+}
+
+//gallery
+.gallery {
+  margin-top: 90px;
+  margin-bottom: 90px;
+
+  @media screen and (max-width: 576px) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+// faculty section
+.faculty {
+  margin-top: 90px;
+  margin-bottom: 90px;
+  @media screen and (max-width: 576px) {
+    margin-top: 60px;
+    margin-bottom: -30px;
+  }
+  h1 {
+    text-align: center;
+    font-size: 34px;
+  }
+  .wrapper {
+    height: auto;
+    padding: 0 20px;
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1050px) {
+      padding-top: 100px;
+      flex-direction: column;
+    }
+  }
+
+  .profileCard {
+    width: 40%;
+    height: 200px;
+    margin: auto;
+    box-shadow: 0px 8px 60px -10px rgba(13, 28, 39, 0.6);
+    background: #fff;
+    border-radius: 12px;
+    position: relative;
+
+    @media screen and (max-width: 1050px) {
+      height: fit-content;
+      width: 80%;
+      margin-bottom: 100px;
+    }
+
+    &.active {
+      .profileCard__cnt {
+        filter: blur(6px);
+      }
+    }
+
+    &__img {
+      width: 150px;
+      height: 150px;
+      margin-left: auto;
+      margin-right: auto;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+      z-index: 4;
+      box-shadow: 0px 5px 50px 0px rgb(0, 118, 254),
+        0px 0px 0px 7px rgba(0, 118, 254, 0.8);
+
+      @media screen and (max-width: 576px) {
+        width: 120px;
+        height: 120px;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+
+    &__cnt {
+      margin-top: -25px;
+      text-align: center;
+      padding: 0 20px;
+      padding-bottom: 40px;
+      transition: all 0.3s;
+    }
+
+    &__name {
+      font-weight: 700;
+      font-size: 21px;
+      color: #000;
+      margin-bottom: 15px;
+
+      &__designation {
+        color: #0076fe;
+        font-weight: 700;
+        font-size: 21px;
+      }
+    }
+
+    &__txt {
+      font-size: 16px;
+      font-weight: 500;
+      color: #324e63;
+      margin-bottom: 15px;
+
+      strong {
+        //color: #ff2846;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+//sponser section
+$animationSpeed: 40s;
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+.sponsers {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  @media screen and (max-width: 576px) {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 34px;
+  }
+
+  .slider {
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+    margin-top: 30px;
+    background-color: #fffafa;
+
+    .slideTrack {
+      animation: scroll $animationSpeed linear infinite;
+      display: flex;
+      width: calc(250px * 14);
+    }
+    .slide {
+      height: 100px;
+      width: 250px;
+    }
+  }
+}
