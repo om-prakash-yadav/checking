@@ -65,7 +65,7 @@ export default function Home({ sponsers }) {
           <div className={s.wrapper}>
             <div className={`${s.profileCard}`}>
               <div className={s.profileCard__img}>
-                <img src="http://istenitdgp.com/fa2.png" alt="profile card" />
+                <img src="/fa2.png" alt="profile card" />
               </div>
               <div className={`${s.profileCard__cnt} ${s.jsProfileCnt}`}>
                 <div className={s.profileCard__name}>
@@ -81,7 +81,7 @@ export default function Home({ sponsers }) {
             <div className={`${s.profileCard}`}>
               <div className={s.profileCard__img}>
                 <img
-                  src="http://istenitdgp.com/rowdra.png"
+                  src="rowdra.png"
                   alt="profile card"
                 />
               </div>
