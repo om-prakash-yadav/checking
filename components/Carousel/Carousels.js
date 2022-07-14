@@ -43,7 +43,7 @@ export default function Carousels({images}) {
                 {images.map((data) => {
                     return (
                         <SwiperSlide key={data.id}>
-                          <Image src={data.Image} height={350} width={700} layout="fixed"
+                          <Image src={data.Image} height={350} width={700} layout="fixed" alt=" "
                            />
                         </SwiperSlide>
                     )

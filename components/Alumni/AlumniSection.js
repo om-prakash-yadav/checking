@@ -19,7 +19,7 @@ function AlumniSection({ alumni, year }) {
 
     setData(FilteredArray);
 
-  }, [year,alumni]);
+  }, [alumni , year]);
 
   return (
 

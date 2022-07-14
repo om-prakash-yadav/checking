@@ -23,7 +23,7 @@ function TeamSection({ teams, title, year }) {
 
     setData(FilteredArray);
 
-  }, [year,teams]);
+  }, [teams , year]);
 
   return (
     <div className="flex-col  justify-center items-center">

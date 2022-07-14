@@ -2,7 +2,7 @@ import React, { forwardRef } from "react";
 import s from "./Modal.styles.module.scss";
 
 const ModalContent = forwardRef(({ cardInfo, close }, ref) => {
- 
+ console.log(cardInfo);
   return (
     <div className="modal-content-container" ref={ref}>
       <div className={s.closeButton}>
@@ -21,7 +21,7 @@ const ModalContent = forwardRef(({ cardInfo, close }, ref) => {
             <h3 className={s.registration} >Registrations open from :- </h3>
             <h3>Event start date :- {cardInfo.startDate}</h3>
             <h3>Event end date :- {cardInfo.endDate}</h3>
-            <button className={`${s.button} ${s.buttonHyperion}`} ><span><span>Go to Event</span></span></button>
+            <button className={s.eventButton} > <a href={cardInfo.link} > Go To Event </a> </button>
           </div>
         </div>
       </div>

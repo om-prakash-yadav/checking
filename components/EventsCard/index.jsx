@@ -5,7 +5,7 @@ function EventCard(props) {
 
     return (
         <div className={s.card}>
-          <img src={props.img} className={s.card__img} />
+          <img src={props.img} className={s.card__img} alt={props.title} />
           <div className={s.card__body}>
             <h2 className={s.card__title}>{props.title}</h2>
             <div className={s.card__info}> 
