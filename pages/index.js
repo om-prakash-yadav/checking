@@ -11,7 +11,7 @@ export default function Home({ sponsers }) {
 
 
   const [data, setData] = useState([])
-  const [isLoading, setLoading] = useState(false)
+  const [isLoading, setLoading] = useState(true)
 
   useEffect(() => {
     setLoading(true)
