@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import s from "./title.styles.module.scss";
 
 function Tiltle({ title  , tagline , font , margin}) {

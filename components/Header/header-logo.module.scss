@@ -1,12 +1,13 @@
 
 .logo {
       
-      background: url('/logo.svg');
+      background: url('/logo.jpg');
       height: 60px;
       width: 60px;
       background-repeat: no-repeat;
       background-size: contain;
       margin-top: 10px;
+      border-radius: 50%;
 }
 
 @media only screen and (max-width: 1000px) {
