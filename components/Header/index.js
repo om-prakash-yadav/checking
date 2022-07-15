@@ -54,7 +54,7 @@ const Header = ({ items, logo, navPosition , home }) => {
   const [menuTL] = useState(
     gsap.timeline({
       paused: true,
-      defaults: { duration: 1, ease: "expo.out" }
+      defaults: { duration: 0.3, }
     })
   );
 

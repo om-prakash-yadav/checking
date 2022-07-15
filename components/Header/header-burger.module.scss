@@ -30,7 +30,7 @@
             &:first-of-type {
                 .open & {
                     transform: rotate(44deg) translate3d(-2px,0,0);
-                    background: black;
+                    background:white;
                 }
             }
     
@@ -45,7 +45,7 @@
             &:last-of-type {
                 .open & {
                     transform: rotate(-46deg) translate3d(-4px, 0, 0);
-                    background: black;
+                    background: white;
                 }
             }
         }
@@ -53,7 +53,7 @@
     &__line {
         width: 28px;
         height: 2px;
-        background: black;
+        background: white;
         border-radius: 2px;
         transform-origin: left center;
         transition: all 0.3s ease;

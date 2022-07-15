@@ -1,60 +1,66 @@
 import React from 'react';
-import SwiperCore, { Virtual, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Image from "next/image"
+
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
 
 
-// install Virtual module
-SwiperCore.use([Navigation, Pagination]);
-
-export default function Carousels({images}) {
+// import required modules
+import { EffectCoverflow, Pagination } from "swiper";
 
 
+export default function Carousels({ images }) {
 
     return (
         <>
             <Swiper
-                slidesPerView={2}
-                spaceBetween={30}
-                centeredSlides={true}
-                loop={true}
-                loopFillGroupWithBlank={true}
-                pagination={{
-                    clickable: true,
+                effect={"coverflow"}
+                grabCursor={true}
+                centeredSlides={false}
+              
+                coverflowEffect={{
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 300,
+                    modifier: 1,
+                    slideShadows: true,
                 }}
-                navigation={true}
-                modules={[Pagination, Navigation]}
-                className="mySwiper"
                 breakpoints={{
 
                     1000: {
-                        slidesPerView: 2,
+                        slidesPerView: 2.5,
                     },
                     375: {
                         slidesPerView: 1,
                     },
                 }}
-
+                pagination={true}
+                modules={[EffectCoverflow, Pagination]}
+                className="mySwiper"
             >
                 {images.map((data) => {
                     return (
                         <SwiperSlide key={data.id}>
-                         
-                          <img src={data.Image}  alt="gallery image" 
-                           />
+
+                            <img className='h-[300px] md:h-[400px] rounded-2xl md:rounded-none' src={data.Image} alt="gallery image"
+                            />
                         </SwiperSlide>
                     )
 
                 })}
-
-
             </Swiper>
-
-
         </>
     );
 }
+
+
+
+
+
+
+
+
+
+
