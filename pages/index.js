@@ -130,20 +130,18 @@ export default function Home({ sponsers }) {
 }
 
 
-
-
 export async function getStaticProps() {
   // Call an external API endpoint to get posts.
-  const res = await fetch("https://omprakash1.pythonanywhere.com/api/sponsers/");
- 
+  const res = await fetch("http://omprakash1.pythonanywhere.com/api/sponsers/");
   const sponsers = await res.json();
 
   // By returning { props: { events } }, the component
   // will receive `events` as a prop at build time
   return {
     props: {
-     sponsers,
+      sponsers,
     },
   };
 }
+
 
